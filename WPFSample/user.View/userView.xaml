@@ -13,58 +13,73 @@
             <Setter Property="HorizontalContentAlignment" Value="Left" />
         </Style>    
     </Window.Resources>
-    
-    <Grid Margin="0,0,0,-20">
-        <DataGrid Name="dgUsers" AutoGenerateColumns="False" DataContext="{Binding viewModel.users}" Style="{DynamicResource DataGridStyle1}" >             
-        <DataGrid.Columns>            
-            <DataGridTextColumn Binding="{Binding userId}" >                   
-                    <DataGridTextColumn.Header>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="UserID" Grid.Row="0"/>
-                        <ComboBox
-	    HorizontalAlignment="Left"
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="" Grid.Row="0"/>
+            <Label
+	    Content="User Id"
+	    HorizontalAlignment="Stretch"
 	    Margin="10,10,0,0"
-	    VerticalAlignment="Top"
+	    VerticalAlignment="Center"
+	    Background="Beige"
+	     Width="120"></Label>
+            <ComboBox
+	    HorizontalAlignment="Stretch"
+	    Margin="10,10,0,0"
+	    VerticalAlignment="Center"
 	    Width="120"
 	    Loaded="ComboBox_Loaded"
 	    SelectionChanged="ComboBox_SelectionChanged"
                             Background="LightYellow"
-                            />                     
-                </StackPanel>
-            </DataGridTextColumn.Header>                
-            </DataGridTextColumn>            
-            <DataGridTextColumn  Header="Id" Binding="{Binding id}" />
-            <DataGridTextColumn Binding="{Binding title}" >
-                <DataGridTextColumn.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="" Grid.Row="0"/>
-                        <Button Grid.Row="1" Width="100" HorizontalAlignment="Right" Name="detailInfo"
-        Margin="0 0 200 0" Click="DetailsInfo" Background="LightSteelBlue">Title</Button>
-                    </StackPanel>
-                </DataGridTextColumn.Header>
-                </DataGridTextColumn>                
-                <DataGridTextColumn Visibility="{Binding IsVisible, Mode=OneWay}" Binding="{Binding body}" >
-                    <DataGridTextColumn.Header>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Description" Grid.Row="0"/>
-                            <ComboBox Name="ComboType"
-	    HorizontalAlignment="Left"
+                            />
+            <TextBlock Text="" Grid.Row="0"/>
+            <Button Grid.Row="1" Width="120" HorizontalAlignment="Stretch" VerticalAlignment="Center" Name="detailInfo"
+        Margin="10,10,0,0" Click="DetailsInfo" Background="Beige">Detailed Information</Button>
+            <TextBlock Text="       " Grid.Row="0"/>
+            <ComboBox Name="ComboType"
+	    HorizontalAlignment="Stretch"
 	    Margin="10,10,0,0"
-	    VerticalAlignment="Top"
+	    VerticalAlignment="Center"
 	    Width="120"
 	    Loaded="TextType_Loaded"
-	    SelectionChanged="TextType_SelectionChanged" Background="LightYellow"/>                            
-                            <Button Grid.Row="1" Width="100" HorizontalAlignment="Right"
-        Margin="0 0 200 0" Click="ShowHideDetails" Background="LightSteelBlue">CopyContents</Button>  
-                        </StackPanel>
-                    </DataGridTextColumn.Header>
-                </DataGridTextColumn>
-            </DataGrid.Columns>
-          
-        </DataGrid>
-       
+	    SelectionChanged="TextType_SelectionChanged" Background="LightYellow"/>
+            <Button Grid.Row="1" Width="100" HorizontalAlignment="Stretch"   VerticalAlignment="Center"
+        Margin="10,10,0,0" Click="ShowHideDetails" Background="Beige">CopyContents</Button>
+        </StackPanel>     
+        <Grid Margin="0,0,0,-20">
+            <DataGrid Name="dgUsers" AutoGenerateColumns="False" DataContext="{Binding viewModel.users}" Style="{DynamicResource DataGridStyle1}"  CanUserAddRows="False" CanUserReorderColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding userId}" >
+                        <DataGridTextColumn.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="UserID" Grid.Row="0"/>                              
+                            </StackPanel>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn  Header="Id" Binding="{Binding id}" />
+                    <DataGridTextColumn Binding="{Binding title}" >
+                        <DataGridTextColumn.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Title" Grid.Row="0"/>                               
+                            </StackPanel>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Visibility="{Binding IsVisible, Mode=OneWay}" Binding="{Binding body}" Width="*">
+                        <DataGridTextColumn.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Description" Grid.Row="0"/>                               
+                            </StackPanel>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
 
-    </Grid>
+            </DataGrid>
+
+
+        </Grid>
+    </StackPanel>
+    
+    
 
 
 

@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-     Title="Copy Content Window" Height="700" Width="1000">
+     Title="New-Content" Height="700" Width="1000">
 
     <StackPanel Orientation="Vertical">
         <Button HorizontalAlignment="Left" Click="moveToMain" Background="LightSteelBlue">Return to Main Window</Button>
