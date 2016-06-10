@@ -1,0 +1,16 @@
+c:\users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\bin\Debug\WPFSample.exe.config
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\bin\Debug\WPFSample.exe
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\bin\Debug\WPFSample.pdb
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\obj\Debug\App.g.cs
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\obj\Debug\WPFSample_MarkupCompile.cache
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\obj\Debug\WPFSample.g.resources
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\obj\Debug\WPFSample.exe
+C:\Users\gauravve\documents\visual studio 2013\Projects\WPFSample\WPFSample\obj\Debug\WPFSample.pdb
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\backup_6-6-2016\WPFSample\WPFSample\bin\Debug\WPFSample.exe.config
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\backup_6-6-2016\WPFSample\WPFSample\obj\Debug\WPFSample.exe
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\backup_6-6-2016\WPFSample\WPFSample\obj\Debug\WPFSample.pdb
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\CopyContents.baml
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\CopyContents.g.cs
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\UserView.baml
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\UserView.g.cs
+C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\WPFSample.csprojResolveAssemblyReference.cache
