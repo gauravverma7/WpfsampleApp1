@@ -60,17 +60,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="User.View\CopyContents.xaml.cs">
-      <DependentUpon>CopyContents.xaml</DependentUpon>
+    <Compile Include="user.Common\enums.cs" />
+    <Compile Include="user.View\copyContents.xaml.cs">
+      <DependentUpon>copyContents.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User.Model\Users.cs" />
-    <Compile Include="User.Repository\WebApi.cs" />
-    <Compile Include="User.ViewModel\UserViewModel.cs" />
-    <Page Include="User.View\CopyContents.xaml">
+    <Compile Include="user.Model\user.cs" />
+    <Compile Include="user.Repository\WebApi.cs" />
+    <Compile Include="user.ViewModel\UserViewModel.cs" />
+    <Page Include="user.View\copyContents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="User.View\UserView.xaml">
+    <Page Include="user.View\userView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -78,8 +79,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="User.View\UserView.xaml.cs">
-      <DependentUpon>UserView.xaml</DependentUpon>
+    <Compile Include="user.View\userView.xaml.cs">
+      <DependentUpon>userView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -101,7 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

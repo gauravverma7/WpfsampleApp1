@@ -1,0 +1,73 @@
+﻿<Window x:Class="WPFSample.userView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPFSample Application"         
+        WindowState="Maximized"
+        Width="1000"
+        Height="700"      
+        x:Name="_this">    
+    <Window.Resources>        
+        <!-- DataGrid style -->
+        <Style x:Key="DataGridStyle1" TargetType="{x:Type DataGrid}" >
+            <Setter Property="ColumnHeaderStyle" Value="{DynamicResource ColumnHeaderStyle1}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+        </Style>    
+    </Window.Resources>
+    
+    <Grid Margin="0,0,0,-20">
+        <DataGrid Name="dgUsers" AutoGenerateColumns="False" DataContext="{Binding viewModel.users}" Style="{DynamicResource DataGridStyle1}" >             
+        <DataGrid.Columns>            
+            <DataGridTextColumn Binding="{Binding userId}" >                   
+                    <DataGridTextColumn.Header>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="UserID" Grid.Row="0"/>
+                        <ComboBox
+	    HorizontalAlignment="Left"
+	    Margin="10,10,0,0"
+	    VerticalAlignment="Top"
+	    Width="120"
+	    Loaded="ComboBox_Loaded"
+	    SelectionChanged="ComboBox_SelectionChanged"
+                            Background="LightYellow"
+                            />                     
+                </StackPanel>
+            </DataGridTextColumn.Header>                
+            </DataGridTextColumn>            
+            <DataGridTextColumn  Header="Id" Binding="{Binding id}" />
+            <DataGridTextColumn Binding="{Binding title}" >
+                <DataGridTextColumn.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="" Grid.Row="0"/>
+                        <Button Grid.Row="1" Width="100" HorizontalAlignment="Right" Name="detailInfo"
+        Margin="0 0 200 0" Click="DetailsInfo" Background="LightSteelBlue">Title</Button>
+                    </StackPanel>
+                </DataGridTextColumn.Header>
+                </DataGridTextColumn>                
+                <DataGridTextColumn Visibility="{Binding IsVisible, Mode=OneWay}" Binding="{Binding body}" >
+                    <DataGridTextColumn.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Description" Grid.Row="0"/>
+                            <ComboBox Name="ComboType"
+	    HorizontalAlignment="Left"
+	    Margin="10,10,0,0"
+	    VerticalAlignment="Top"
+	    Width="120"
+	    Loaded="TextType_Loaded"
+	    SelectionChanged="TextType_SelectionChanged" Background="LightYellow"/>                            
+                            <Button Grid.Row="1" Width="100" HorizontalAlignment="Right"
+        Margin="0 0 200 0" Click="ShowHideDetails" Background="LightSteelBlue">CopyContents</Button>  
+                        </StackPanel>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+          
+        </DataGrid>
+       
+
+    </Grid>
+
+
+
+
+
+</Window>
