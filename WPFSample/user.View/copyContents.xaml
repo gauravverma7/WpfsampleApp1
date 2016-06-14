@@ -4,14 +4,18 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-     Title="New-Content" Height="700" Width="1000">
-
-    <StackPanel Orientation="Vertical">
-        <Button HorizontalAlignment="Left" Click="moveToMain" Background="LightSteelBlue">Return to Main Window</Button>
-        <TextBox Background="Transparent" Name="CopyContent"
+     Title="New-Content"  WindowState="Maximized"
+        Width="1000"
+        Height="700"      
+        x:Name="_this"> 
+    <StackPanel Orientation="Horizontal">
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Click="moveToMain" Background="LightSteelBlue">Return to Main Window</Button>
+        <ScrollViewer Height="700" VerticalScrollBarVisibility="Auto">
+            <TextBox Background="Transparent" Name="CopyContent"
                  VerticalScrollBarVisibility="Visible"
                  AcceptsReturn="True"         
          TextWrapping="Wrap" />
+        </ScrollViewer>
     </StackPanel>
 
 </Window>

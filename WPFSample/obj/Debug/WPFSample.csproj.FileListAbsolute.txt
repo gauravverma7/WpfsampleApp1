@@ -13,4 +13,3 @@ C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\
 C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\CopyContents.g.cs
 C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\UserView.baml
 C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\User.View\UserView.g.cs
-C:\Users\gauravve\Documents\Visual Studio 2013\Projects\WPFSample\WPFSample\obj\Debug\WPFSample.csprojResolveAssemblyReference.cache
