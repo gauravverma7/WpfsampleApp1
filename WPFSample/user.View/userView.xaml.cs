@@ -19,6 +19,7 @@ using System.Collections;
 using System.Data;
 using WPFSample.Model;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace WPFSample
 {
@@ -105,8 +106,9 @@ namespace WPFSample
             var selectValue = ComboType.SelectedValue;
             if (selectValue.ToString().ToLower().Equals("json"))
             {
-                JavaScriptSerializer serializeData = new JavaScriptSerializer();
-                textFormat = serializeData.Serialize(dgSelectedData);
+                JavaScriptSerializer serializeData = new JavaScriptSerializer();                
+                textFormat = JsonConvert.SerializeObject(dgSelectedData, Formatting.Indented);
+
             }
             else if (selectValue.ToString().ToLower().Equals("html"))
             {
